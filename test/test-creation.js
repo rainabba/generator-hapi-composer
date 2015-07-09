@@ -38,7 +38,7 @@ describe('generator-hapi-composer', function () {
       var expectedContent = [
         ['package.json', /"dependencies": {/],
         ['package.json', /"devDependencies": {/],
-        ['package.json', /"hapi": "6.x.x"/],
+        ['package.json', /"hapi": "^8.x.x"/],
         ['package.json', /"lab": "3.x.x"/],
         ['package.json', /"node": ">=0.10.22"/],
         ['package.json', /"gulp": "\^3.6.2"/],
@@ -537,7 +537,7 @@ describe('generator-hapi-composer', function () {
 
       var expectedContent = [
         ['package.json', /"yar"/],
-        ['lib/config.json', /"yar": {}/]
+        ['lib/config.json', /"yar": { "cookieOptions": { "password": "passwordToEncryptCookie" } }/]
       ];
 
       helpers.mockPrompt(this.app, {

@@ -312,7 +312,7 @@ module.exports = yeoman.generators.Base.extend({
 
     if (this.hapiPlugins) {
       Object.keys(this.hapiPlugins).forEach(function(key) {
-        _composerConfig.plugins[key] = {};
+        _composerConfig.plugins[key] = ( key === 'yar' ? { "cookieOptions": { "password": "passwordToEncryptCookie" } } : {} );
       });
     }
 

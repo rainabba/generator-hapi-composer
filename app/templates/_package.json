@@ -20,7 +20,8 @@
     "composer"
   ],
   "dependencies": {
-    "hapi": "6.x.x"<% if (dependencies) { %>,
+    "hapi": "~8.x.x",
+    "glue": "^2.1.0"<% if (dependencies) { %>,
 <%= dependencies %><% } %>
   },
   "devDependencies": {

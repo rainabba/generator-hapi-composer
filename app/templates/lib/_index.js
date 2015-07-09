@@ -15,7 +15,8 @@
 // var fs = require('fs');
 //
 // // External libs
-var Hapi = require('hapi');
+var Hapi = require('hapi'),
+  Glue = require('glue');
 //
 // // Internal libs
 // var data = require('./data.js');
@@ -24,7 +25,7 @@ var Hapi = require('hapi');
 var config = require('./config.json');
 
 var manifest = {
-  servers: [{
+  connections: [{
     host: config.host,
     port: config.port
   }],
@@ -32,7 +33,7 @@ var manifest = {
 };
 
 if (!module.parent) {
-  Hapi.Pack.compose(manifest, function (err, pack) {
+  Glue.compose(manifest, function (err, pack) {
     if (err) {
       console.log('Failed composing');
     } else {

@@ -3,6 +3,8 @@
 
 This generator creates a new [hapi](http://hapijs.com/) project with all the boilerplate you need to get started. The hapi-plugins selection in the prompt will be automatically added to the composer manifest.
 
+Updated to support Hapi 8.x
+
 ## Installation
 
 Install the generator by running: `npm install -g generator-hapi-composer`
